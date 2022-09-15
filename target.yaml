@@ -1,0 +1,21 @@
+--- #first playbook
+- hosts: test[0]
+  user: anurag
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+    - name: copy dev file
+      action: copy src=/mnt/ansible_project/dev/index.html dest=/var/www/html
+
+- hosts: test[1]
+  user: anurag
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+    - name: copy qa file
+      action: copy src=/mnt/ansible_project/qa/index.html dest=/var/www/html
+
