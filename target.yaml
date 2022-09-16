@@ -7,7 +7,7 @@
 
   tasks:
     - name: copy dev file
-      action: copy src=/mnt/ansible_project/dev/index.html dest=/var/www/html
+      action: copy src=/mnt/ansible_project/dev/dev/index.html dest=/var/www/html
 
 - hosts: test[1]
   user: anurag
@@ -17,5 +17,5 @@
 
   tasks:
     - name: copy qa file
-      action: copy src=/mnt/ansible_project/qa/index.html dest=/var/www/html
+      action: copy src=/mnt/ansible_project/qa/qa/index.html dest=/var/www/html
 
